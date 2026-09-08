@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-    color: aquamarine;
+    color: rgb(35, 202, 146);
     font-size: 36px;
     margin-bottom: 20px;
 }
@@ -23,7 +23,7 @@ img {max-width: 100%;
     border-radius: 10px;
 }
 
-a {color: aqua;
+a {color: rgb(3, 80, 80);
     text-decoration: none;
 }
 
