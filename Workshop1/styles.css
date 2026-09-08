@@ -1,0 +1,73 @@
+/* Style the whole page */
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 8 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: aquamarine;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+img {max-width: 100%;
+    border-radius: 10px;
+}
+
+a {color: aqua;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    /* Set the font */
+
+
+    /* Limit the maximum width of the content */
+
+
+    /* Center the page horizontally */
+
+
+    /* Add space inside the page */
+
+
+/* Style the main heading */
+
+    /* Change the text color */
+
+
+/* Style all paragraphs */
+
+    /* Set the text size */
+
+
+    /* Add space between lines of text */
+
+
+/* Style all images */
+
+    /* Prevent images from becoming wider than their container */
+
+
+    /* Round the corners of images */
+
+/* Style all links */
+
+    /* Change the link color */
+
+
+/* Style links when the mouse is over them */
+
+    /* Remove the underline */
