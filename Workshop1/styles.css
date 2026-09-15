@@ -1,73 +1,59 @@
 /* Style the whole page */
 
 body {
+    /* Set the font */
     font-family: Arial, sans-serif;
+    /* Limit the maximum width of the content */
     max-width: 800px;
-    margin: 8 auto;
+    /* Center the page horizontally */
+    margin: 0 auto;
+    /* Add space inside the page */
     padding: 20px;
 }
 
-h1 {
-    color: rgb(35, 202, 146);
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-img {max-width: 100%;
-    border-radius: 10px;
-}
-
-a {color: rgb(3, 80, 80);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-    /* Set the font */
-
-
-    /* Limit the maximum width of the content */
-
-
-    /* Center the page horizontally */
-
-
-    /* Add space inside the page */
-
-
 /* Style the main heading */
 
+h1 {
     /* Change the text color */
-
+    color: #23ca92;
+    /* Set the text size */
+    font-size: 36px;
+    /* Add space below the heading */
+    margin-bottom: 20px;
+}
 
 /* Style all paragraphs */
 
+p {
     /* Set the text size */
-
-
+    font-size: 18px;
     /* Add space between lines of text */
-
+    line-height: 1.6;
+    /* Add space below each paragraph */
+    margin-bottom: 20px;
+}
 
 /* Style all images */
 
+img {
     /* Prevent images from becoming wider than their container */
-
-
+    max-width: 100%;
     /* Round the corners of images */
+    border-radius: 10px;
+}
 
 /* Style all links */
 
+a {
     /* Change the link color */
-
+    color: rgb(3, 80, 80);
+    /* Remove the underline */
+    text-decoration: none;
+}
 
 /* Style links when the mouse is over them */
 
-    /* Remove the underline */
+a:hover {
+    /* Add underline on hover*/
+    text-decoration: underline;
+}
