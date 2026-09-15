@@ -4,15 +4,15 @@ console.log("Hello, World");
 
 // STEP 2: Variables
 
+// Store text values in variables
+
 const userName = "Aksu";
 const favoriteAnimal = "Frenchie Doggo";
-
-// Store text values in variables
 
 // Print the variables to the console
 
 console.log("My name is " + userName);
-console.log("My favorite animal is " + favoriteAnimal);
+console.log("My favorite animal is my lovely " + favoriteAnimal);
 
 // STEP 3: User interaction
 
@@ -26,11 +26,11 @@ const visitorName = prompt("What is your name?");
 
 // Print the user's answer
 
-console.log(visitorName);
+console.log("Hello, " + userName + "! My name is " + visitorName);
 
 // Create a greeting using the user's answer
 
-console.log("Hello, " + visitorName + "! Welcome to the Frenchie Doggo page!");
+console.log("Hello, " + visitorName + "! Welcome to my Frenchie Doggo page!");
 
 // Ask the user for their favorite animal
 
@@ -38,8 +38,17 @@ const visitorFavoritAnimal = prompt("What is your favorite animal?");
 
 // Create a sentence using both answers
 
-console.log("Oh, " + visitorName + "! That is awesome that " + visitorFavoritAnimal + " is your fav animal, cool!");
+// console.log("Oh, " + visitorName + "! That is awesome that " + visitorFavoritAnimal + " is your fav animal, cool!");
 
 
 // ⭐⭐ BONUS Ask the user for their favorite animal.If their favorite animal is "Blue Elephant", print: Great choice! That's my favorite animal too!
 // ⭐⭐ BONUS Otherwise, print: Nice! Your favorite animal is [animal]. Can you figure out how to do this using if / else?
+
+//  const visitorFavoritAnimal = prompt("What is your favorite animal?");
+
+if (visitorFavoritAnimal === "Frenchie Doggo") {
+    console.log("OMG " + visitorName + " that is my favorite animal too, wow!");
+}
+else {
+    console.log("Oh, " + visitorName + "! That is awesome that " + visitorFavoritAnimal + " is your fav animal, cool!");
+}
