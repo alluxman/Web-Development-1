@@ -15,11 +15,33 @@ const formResult = document.getElementById("formResult");
 animalForm.addEventListener("submit", function (event) {
     event.preventDefault();
     // TODO: Clear previous errors / Tyhjennä edelliset virheet.
+    nameError.textContent = "";
+    speciesError.textContent = "";
+    noteError.textContent = "";
+    formResult.textContent = "";
     // TODO: Read and trim values / Lue ja trimmaa kenttien arvot.
+    const name = animalName.value.trim();
+    const species = animalSpecies.value.trim();
+    const note = careNote.value.trim();
     // TODO: Validate and show errors / Validoi ja näytä virheet.
+    if (name === "") {
+        nameError.textContent = "Enter the animal name, please.";
+    }
+    if (species === "") {
+        speciesError.textContent = "Enter the animal species, please.";
+    }
+    if (note.length < 1 || note.length > 150) {
+        noteError.textContent = "The care note must contain 1-150 characters.";
+    }
+    if (nameError.textContent !== "" || speciesError.textContent !== "" || noteError.textContent !== "") {
+        return;
+    }
     // TODO: If valid, show the result / Näytä hyväksytty tulos.
+    formResult.textContent = `Animal: ${name}, species: ${species}. Care note: ${note}`;
     // TODO: Create { name, species, note } and save it as JSON.
     // TODO: Luo { name, species, note } ja tallenna se JSON-tekstinä.
+    const animal = { name, species, note };
+    localStorage.setItem("ws05Animal", JSON.stringify(animal));
 });
 
 // Exercise 2 / Harjoitus 2
@@ -33,9 +55,32 @@ sponsorForm.addEventListener("submit", function (event) {
     event.preventDefault();
     // TODO: Convert input values with Number().
     // TODO: Muunna syötteet numeroiksi Number()-funktiolla.
+    const type = Number(animalType.value);
+    const years = Number(yearsInput.value);
+    if (years < 1 || !Number.isInteger(years)) {
+        cost.textContent = "Number of years must be a positive whole number!";
+        return;
+    }
     // TODO: Calculate the price and apply discounts.
     // TODO: Laske hinta ja alennukset.
+    const total = type * years;
+    let discount = 0;
+    if (years > 2) {
+        discount = total * 0.20;
+    }
+    let finalCost = total - discount;
+    if (years >= 5) {
+       finalCost -= 5;
+    }
     // TODO: Show the result / Näytä tulos.
+    cost.textContent = `Total: ${finalCost} €`;
+    if (years >= 5) {
+        discountMessage.textContent = "Discount: 20% + 5€ extra bonus";
+    } else if (years > 2) {
+        discountMessage.textContent = "Discount: 20%";
+    } else {
+        discountMessage.textContent = "No discount";
+    }
 });
 
 // Exercise 4 / Harjoitus 4
