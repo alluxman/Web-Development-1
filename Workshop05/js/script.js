@@ -91,15 +91,25 @@ const savedAnimal = document.getElementById("savedAnimal");
 function loadAnimal() {
     // TODO: Read ws05Animal. Handle null before using JSON.parse().
     // TODO: Lue ws05Animal. Tarkista null ennen JSON.parse()-muunnosta.
+    const savedAnimalData = localStorage.getItem("ws05Animal");
+    if (savedAnimalData === null) {
+        savedAnimal.textContent = "No saved animal yet.";
+        return;
+    }
+    const animal = JSON.parse(savedAnimalData);
     // TODO: Display name, species and note with textContent.
     // TODO: Näytä nimi, laji ja muistio textContent-ominaisuudella.
+    savedAnimal.textContent = `Name: ${animal.name}, species: ${animal.species}, Care note: ${animal.note}`;
 }
 
 loadButton.addEventListener("click", loadAnimal);
 clearButton.addEventListener("click", function () {
     // TODO: Remove ws05Animal and update the displayed result.
     // TODO: Poista ws05Animal ja päivitä sivulla näkyvä tulos.
+    localStorage.removeItem("ws05Animal");
+    loadAnimal();
 });
 
 // TODO: Call loadAnimal() here to restore data when the page opens.
 // TODO: Kutsu loadAnimal() tässä, jotta tiedot palautuvat sivun avautuessa.
+loadAnimal();
